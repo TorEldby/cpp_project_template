@@ -1,0 +1,2 @@
+C:/Users/theas/projects/cpp/cpp_template_project/build/CMakeFiles/edit_cache.dir
+C:/Users/theas/projects/cpp/cpp_template_project/build/CMakeFiles/rebuild_cache.dir
