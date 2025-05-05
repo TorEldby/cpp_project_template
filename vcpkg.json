@@ -2,10 +2,14 @@
     "name": "cpp-project-manifest",
     "version": "1.0",
     "dependencies": [
-
+        "blaze",
+        "glwf3"
     ],
     "overrides": [
-        {},
-        {}
-    ]
+        {
+            "name": "blaze",
+            "version": "3.8.1"
+        }
+    ],
+    "default-triplet": "x64-mingw-static"
 }
