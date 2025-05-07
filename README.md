@@ -19,3 +19,5 @@ Vcpkg assumes primarily that you use the MSVC compiler package (Such as what you
 For linux, use
 `export VCPKG_DEFAULT_TRIPLET=x64-mingw-dynamic`
 `export VCPKG_DEFAULT_HOST_TRIPLET=x64-mingw-dynamic`
+
+More information about triplets can be found [here](https://learn.microsoft.com/en-us/vcpkg/concepts/triplets), along with some info on [triplet variables](https://learn.microsoft.com/en-us/vcpkg/users/triplets)
