@@ -23,6 +23,8 @@ file(GLOB SOURCES "src/*.cpp")
 
 add_executable(${PROJECT_NAME} ${INCLUDE} ${SOURCES})
 
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
-    COMMAND ${CMAKE_COMMAND} -E copy_directory 
-    ${VCPKG_BIN_DIR} $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+if(EXISTS ${VCPKG_BIN_DIR})
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
+        COMMAND ${CMAKE_COMMAND} -E copy_directory 
+        ${VCPKG_BIN_DIR} $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+endif()
