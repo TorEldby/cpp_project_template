@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 4.0)
 
 set(VCPKG_MANIFEST_MODE ON)
+set(VCPKG_TARGET_TRIPLET "x64-mingw-dynamic")
 set(VCPKG_BIN_DIR "${CMAKE_SOURCE_DIR}/${CMAKE_PREFIX_PATH}/bin")
 
 message(STATUS "DEBUG: Running CMake from: ${CMAKE_SOURCE_DIR}")
