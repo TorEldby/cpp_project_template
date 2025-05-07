@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 4.0)
 set(VCPKG_MANIFEST_MODE ON)
 set(VCPKG_BIN_DIR "${CMAKE_SOURCE_DIR}/${CMAKE_PREFIX_PATH}/bin")
 
-message(STATUS "DEBUG: Running CMake from current source dir: ${CMAKE_SOURCE_DIR}")
+message(STATUS "DEBUG: Running CMake from: ${CMAKE_SOURCE_DIR}")
 message(STATUS "DEBUG: VPKG_BIN_DIR: ${VCPKG_BIN_DIR}")
 
 if(UNIX)
@@ -22,10 +22,6 @@ file(GLOB INCLUDE "include/*.h")
 file(GLOB SOURCES "src/*.cpp")
 
 add_executable(${PROJECT_NAME} ${INCLUDE} ${SOURCES})
-
-find_package(glfw3 CONFIG REQUIRED)
-find_package(glad CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad::glad)
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
     COMMAND ${CMAKE_COMMAND} -E copy_directory 
